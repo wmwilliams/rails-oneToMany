@@ -1,9 +1,14 @@
 class User < ActiveRecord::Base
-  validates :email,
+  validates :my_email_attribute, 
+  email: true,
   presence: true,
   uniqueness: {case_sensitive: false}
 
-  validates_presence_of :password, on: create
+
+  validates :name,
+  presence: true,
+  length: { maximum: 20,
+  too_long: "20 characters is the maximum allowed" }
 
   has_secure_password
 
