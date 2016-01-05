@@ -33,14 +33,14 @@ class PostsController < ApplicationController
   def destroy
     result = Post.destroy params[:id]
     respond_to do |format|
-      format.html {redirect_to :posts}
-      format.json {render json: result}
+    format.html {redirect_to :posts}
+    format.json {render json: result}
     end
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:content, :username)
+    params.require(:post).permit(:title, :link, :user_id)
   end
 end
