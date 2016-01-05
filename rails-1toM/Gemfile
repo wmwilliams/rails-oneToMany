@@ -31,6 +31,7 @@ gem 'bootstrap_form'
 gem 'gon'
 # Use Unicorn as the app server
 # gem 'unicorn'
+gem 'email_validator'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

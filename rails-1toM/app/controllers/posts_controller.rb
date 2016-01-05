@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :is_authenticated?
   def index
     @posts = Post.all
     gon.something = "hello"
